@@ -1,0 +1,2520 @@
+@charset "UTF-8";
+/*!
+ * Bootstrap v4.5.0 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+:root {
+  --blue: #377dff;
+  --indigo: #2d1582;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #ed4c78;
+  --orange: #fd7e14;
+  --yellow: #f5ca99;
+  --green: #28a745;
+  --teal: #00c9a7;
+  --cyan: #09a5be;
+  --white: #fff;
+  --gray: #8c98a4;
+  --gray-dark: #71869d;
+  --primary: #377dff;
+  --secondary: #71869d;
+  --success: #00c9a7;
+  --info: #09a5be;
+  --warning: #f5ca99;
+  --danger: #ed4c78;
+  --light: #f7faff;
+  --dark: #1e2022;
+  --indigo: #2d1582;
+  --navy: #21325b;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ header, main {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #677788;
+  text-align: left;
+  background-color: #fff;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #377dff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #0052ea;
+  text-decoration: none;
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1, h2, h3,
+.h1, .h2, .h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1e2022;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1200px) {
+  h1, .h1 {
+    font-size: calc(1.375rem + 1.5vw) ;
+  }
+}
+
+h2, .h2 {
+  font-size: 1.875rem;
+}
+
+@media (max-width: 1200px) {
+  h2, .h2 {
+    font-size: calc(1.3125rem + 0.75vw) ;
+  }
+}
+
+h3, .h3 {
+  font-size: 1.3125rem;
+}
+
+@media (max-width: 1200px) {
+  h3, .h3 {
+    font-size: calc(1.25625rem + 0.075vw) ;
+  }
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+  .display-4 {
+    font-size: calc(1.475rem + 2.7vw) ;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+ .col-md-4, .col-md-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .col-md-5 {
+    -ms-flex: 0 0 41.66667%;
+        flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 0.75rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 0.75rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.carousel {
+  position: relative;
+}
+
+@-webkit-keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.bg-primary {
+  background-color: #377dff !important;
+}
+
+a.bg-primary:hover, a.bg-primary:focus {
+  background-color: #045cff !important;
+}
+
+.bg-navy {
+  background-color: #21325b !important;
+}
+
+a.bg-navy:hover, a.bg-navy:focus {
+  background-color: #131d36 !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.border-bottom {
+  border-bottom: 0.0625rem solid #e7eaf3 !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+  .d-md-inline-block {
+    display: inline-block !important;
+  }
+  .d-md-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+.justify-content-start {
+  -ms-flex-pack: start !important;
+      justify-content: flex-start !important;
+}
+
+.align-items-center {
+  -ms-flex-align: center !important;
+      align-items: center !important;
+}
+
+@media (min-width: 768px) {
+  .align-items-md-center {
+    -ms-flex-align: center !important;
+        align-items: center !important;
+  }
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 2.5rem !important;
+}
+
+.pl-3 {
+  padding-left: 1rem !important;
+}
+
+.p-7 {
+  padding: 3rem !important;
+}
+
+
+.mx-auto {
+  margin-right: auto !important;
+}
+
+
+.mx-auto {
+  margin-left: auto !important;
+}
+
+@media (min-width: 576px) {
+  .mr-sm-2 {
+    margin-right: 0.5rem !important;
+  }
+  .ml-sm-2 {
+    margin-left: 0.5rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mr-xl-4 {
+    margin-right: 1.5rem !important;
+  }
+  .ml-xl-4 {
+    margin-left: 1.5rem !important;
+  }
+}
+
+.font-weight-bold {
+  font-weight: 600 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-primary {
+  color: #377dff !important;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #0052ea !important;
+}
+
+.text-navy {
+  color: #21325b !important;
+}
+
+a.text-navy:hover, a.text-navy:focus {
+  color: #0d1323 !important;
+}
+
+.text-muted {
+  color: #8c98a4 !important;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a:not(.btn) {
+    text-decoration: underline;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  @page {
+    size: a3;
+  }
+  body {
+    min-width: 992px !important;
+  }
+  .container {
+    min-width: 992px !important;
+  }
+}
+
+/*----------------------------------------------------------------------
+  * Front - Responsive Website Template version v3.2.2
+  * Copyright 2018 Htmlstream
+  * Licensed under Bootstrap Themes (https://themes.getbootstrap.com/licenses/)
+------------------------------------------------------------------------*/
+
+.w-80 {
+  width: 80% !important;
+}
+
+@media (min-width: 992px) {
+  .w-lg-50 {
+    width: 50% !important;
+  }
+}
+
+.space-2 {
+  padding-top: 4rem !important;
+}
+
+.space-2 {
+  padding-bottom: 4rem !important;
+}
+
+
+.space-bottom-3 {
+  padding-bottom: 8rem !important;
+}
+
+
+.space-top-4 {
+  padding-top: 12.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .space-md-0 {
+    padding-top: 0 !important;
+  }
+  .space-md-0 {
+    padding-bottom: 0 !important;
+  }
+}
+
+/*------------------------------------
+  Default Styles
+------------------------------------*/
+main {
+  position: relative;
+}
+
+h1, h2, h3,
+.h1, .h2, .h3 {
+  color: #1e2022;
+}
+
+/*------------------------------------
+  Highlight Color
+------------------------------------*/
+
+::selection {
+  color: #fff;
+  background-color: #377dff;
+}
+
+.bg-primary ::-moz-selection {
+  color: #377dff;
+  background-color: #fff;
+}
+
+.bg-primary ::selection {
+  color: #377dff;
+  background-color: #fff;
+}
+
+/*------------------------------------
+  Accessibility
+------------------------------------*/
+
+a:focus {
+  outline: 0;
+}
+
+/*------------------------------------
+  Print styles
+------------------------------------*/
+@media print {
+  header {
+    display: none;
+  }
+}
+
+/*------------------------------------
+  Skippy
+------------------------------------*/
+
+/*------------------------------------
+  List Article
+------------------------------------*/
+
+/*------------------------------------
+  List Group
+------------------------------------*/
+
+/* Sizes */
+
+/*------------------------------------
+  Links
+------------------------------------*/
+.link {
+  font-size: 0.875rem;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* Collapse */
+
+/* Link Underline */
+
+/* Link Underline Light */
+
+/*------------------------------------
+  Header Default
+------------------------------------*/
+.header {
+  position: relative;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.header-section {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+}
+
+/* Navbar Brand */
+
+/* Navbar Toggler */
+
+/* Nav Item */
+
+/* Nav Link */
+
+/* Dropdown */
+
+/* Promo */
+
+/* Banner */
+
+/* Product Banner */
+
+/*------------------------------------
+  Header Helpers
+------------------------------------*/
+
+.header[data-hs-header-options*="fixMoment"] {
+  transition: 0.3s ease;
+}
+
+/*------------------------------------
+  Nav Alignments
+------------------------------------*/
+
+/*------------------------------------
+  Header Default
+------------------------------------*/
+
+/*------------------------------------
+  Nav Wrap
+------------------------------------*/
+
+/*------------------------------------
+  Fullscreen
+------------------------------------*/
+
+/*------------------------------------
+  Header Fullscreen Style
+------------------------------------*/
+
+/*------------------------------------
+  Transparent Header
+------------------------------------*/
+
+.header-bg-transparent:not(.js-header-fix-moment) .header-section {
+  background-color: transparent;
+}
+
+/*------------------------------------
+  Header On Scroll
+------------------------------------*/
+
+/*------------------------------------
+  Header White Nav Links
+------------------------------------*/
+
+/*------------------------------------
+  Navbar Expand
+------------------------------------*/
+
+/*------------------------------------
+  Header Floating
+------------------------------------*/
+
+/*------------------------------------
+  Absolute Positions
+------------------------------------*/
+.header-abs-top {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+}
+
+/*------------------------------------
+  Sticky Positions
+------------------------------------*/
+
+/*------------------------------------
+  Animation
+------------------------------------*/
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 15px, 0);
+            transform: translate3d(0, 15px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 15px, 0);
+            transform: translate3d(0, 15px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+}
+
+/*------------------------------------
+  Alert Styles
+------------------------------------*/
+
+/* primary soft */
+
+/* secondary soft */
+
+/* success soft */
+
+/* info soft */
+
+/* warning soft */
+
+/* danger soft */
+
+/* light soft */
+
+/* dark soft */
+
+/* indigo soft */
+
+/* navy soft */
+
+/*------------------------------------
+  Avatar
+------------------------------------*/
+
+/*------------------------------------
+  Avatar Group
+------------------------------------*/
+
+/*------------------------------------
+  Avatar Initials
+------------------------------------*/
+
+/*------------------------------------
+  Avatar Sizes
+------------------------------------*/
+
+/*------------------------------------
+  Avatar Status
+------------------------------------*/
+
+/*------------------------------------
+  Avatar Styles
+------------------------------------*/
+/* primary soft */
+
+/* secondary soft */
+
+/* success soft */
+
+/* info soft */
+
+/* warning soft */
+
+/* danger soft */
+
+/* light soft */
+
+/* dark soft */
+
+/* indigo soft */
+
+/* navy soft */
+
+/* primary soft */
+
+/* secondary soft */
+
+/* success soft */
+
+/* info soft */
+
+/* warning soft */
+
+/* danger soft */
+
+/* light soft */
+
+/* dark soft */
+
+/* indigo soft */
+
+/* navy soft */
+
+/*------------------------------------
+  Badge Soft
+------------------------------------*/
+/* primary soft */
+
+/* secondary soft */
+
+/* success soft */
+
+/* info soft */
+
+/* warning soft */
+
+/* danger soft */
+
+/* light soft */
+
+/* dark soft */
+
+/* indigo soft */
+
+/* navy soft */
+
+/*------------------------------------
+  Custom Buttons
+------------------------------------*/
+
+/* primary button :hover, :focus, :active effects */
+
+/* secondary button :hover, :focus, :active effects */
+
+/* success button :hover, :focus, :active effects */
+
+/* info button :hover, :focus, :active effects */
+
+/* warning button :hover, :focus, :active effects */
+
+/* danger button :hover, :focus, :active effects */
+
+/* light button :hover, :focus, :active effects */
+
+/* dark button :hover, :focus, :active effects */
+
+/* indigo button :hover, :focus, :active effects */
+
+/* navy button :hover, :focus, :active effects */
+
+/*------------------------------------
+  Custom Button Toggle
+------------------------------------*/
+/* primary custom toggle button */
+
+/* secondary custom toggle button */
+
+/* success custom toggle button */
+
+/* info custom toggle button */
+
+/* warning custom toggle button */
+
+/* danger custom toggle button */
+
+/* light custom toggle button */
+
+/* dark custom toggle button */
+
+/* indigo custom toggle button */
+
+/* navy custom toggle button */
+
+/*------------------------------------
+  Soft Button Styles
+------------------------------------*/
+/* primary soft */
+
+/* secondary soft */
+
+/* success soft */
+
+/* info soft */
+
+/* warning soft */
+
+/* danger soft */
+
+/* light soft */
+
+/* dark soft */
+
+/* indigo soft */
+
+/* navy soft */
+
+/*------------------------------------
+  Outline Button Styles
+------------------------------------*/
+
+/*------------------------------------
+  Button Sizes
+------------------------------------*/
+/* Wide */
+
+/* Extra Small */
+
+/* Icons */
+
+/*------------------------------------
+  Ghost Buttons Styles
+------------------------------------*/
+/* primary ghost button */
+
+/* secondary ghost button */
+
+/* success ghost button */
+
+/* info ghost button */
+
+/* warning ghost button */
+
+/* danger ghost button */
+
+/* light ghost button */
+
+/* dark ghost button */
+
+/* indigo ghost button */
+
+/* navy ghost button */
+
+/*------------------------------------
+  Button Groups
+------------------------------------*/
+
+/*------------------------------------
+  Button Status
+------------------------------------*/
+
+/*------------------------------------
+  Buttons
+------------------------------------*/
+
+/* Toggle */
+
+/*------------------------------------
+  Brand
+------------------------------------*/
+
+/*------------------------------------
+  Breadcrumb
+------------------------------------*/
+
+/*------------------------------------
+  Card
+------------------------------------*/
+
+/* Background Color */
+
+/* Frame */
+
+/* Shadow On Hover */
+
+/* Collapse */
+
+/* Dashed */
+
+/* Bordered */
+
+/* IE image rendering fix */
+
+/* Table */
+
+/* Dropdown */
+
+/*------------------------------------
+  Card Gutters
+------------------------------------*/
+
+/*------------------------------------
+  Card Group - Break
+------------------------------------*/
+
+/*------------------------------------
+  Sidebar Navigation
+------------------------------------*/
+
+/*------------------------------------
+  Clients
+------------------------------------*/
+
+/*------------------------------------
+  Column Divider
+------------------------------------*/
+
+/*------------------------------------
+  Divider
+------------------------------------*/
+.divider {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.divider::before, .divider::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+}
+
+.divider::before {
+  right: 100%;
+  background-image: linear-gradient(45deg, transparent, #bdc5d1);
+  background-repeat: repeat-x;
+}
+
+.divider::after {
+  left: 100%;
+  background-image: linear-gradient(45deg, #bdc5d1, transparent);
+  background-repeat: repeat-x;
+}
+
+/*------------------------------------
+  Divider Sizes
+------------------------------------*/
+.divider::before, .divider::after {
+  width: 10rem;
+  height: 0.0625rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.divider::before {
+  margin-right: 0.625rem;
+}
+
+.divider::after {
+  margin-left: 0.625rem;
+}
+
+@media (max-width: 767.98px) {
+  .divider::before, .divider::after {
+    width: 4rem;
+  }
+}
+
+/*------------------------------------
+  Divider Styles
+------------------------------------*/
+/* Text */
+
+/*------------------------------------
+  Dropdown
+------------------------------------*/
+/* Menu */
+
+/* Nav Link */
+
+/* Item */
+
+/* Toggle */
+
+/* Card */
+
+/* Dropdown Positions */
+
+/*------------------------------------
+  Dropdown Card
+------------------------------------*/
+
+/*------------------------------------
+  Dropdown Sizes
+------------------------------------*/
+
+/*------------------------------------
+  Form
+------------------------------------*/
+
+/* Input Label */
+
+/* Form Link */
+
+/* Form Borderless */
+
+/*------------------------------------
+  Merge
+------------------------------------*/
+
+/*------------------------------------
+  Form Pill
+------------------------------------*/
+
+/*------------------------------------
+  Form Sizes
+------------------------------------*/
+
+/*------------------------------------
+  Flush
+------------------------------------*/
+
+/*------------------------------------
+  States
+------------------------------------*/
+
+/*------------------------------------
+  Bookmark Checkbox
+------------------------------------*/
+
+/*------------------------------------
+  Custom Select
+------------------------------------*/
+
+/*------------------------------------
+  Checkbox Outline
+------------------------------------*/
+
+/*------------------------------------
+  Checkbox Icon
+------------------------------------*/
+
+/*------------------------------------
+  Custom Checkbox
+------------------------------------*/
+
+/*------------------------------------
+  Toggle Switch
+------------------------------------*/
+
+/*------------------------------------
+  File Attachment Button
+------------------------------------*/
+
+/*------------------------------------
+  File Attachment Input
+------------------------------------*/
+
+/*------------------------------------
+  Go To
+------------------------------------*/
+.go-to {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 9999;
+  width: 2.6875rem;
+  height: 2.6875rem;
+  background-color: rgba(113, 134, 157, 0.1);
+  color: #677788;
+  font-size: 0.8125rem;
+  opacity: 0.5;
+  border-radius: 50%;
+  transition: 0.3s ease-out;
+}
+
+.go-to:hover, .go-to:focus:hover {
+  color: #fff;
+  background-color: #377dff;
+  opacity: 1;
+}
+
+/*------------------------------------
+  Icon
+------------------------------------*/
+
+/*------------------------------------
+  Icon
+------------------------------------*/
+/* primary */
+
+/* secondary */
+
+/* success */
+
+/* info */
+
+/* warning */
+
+/* danger */
+
+/* light */
+
+/* dark */
+
+/* indigo */
+
+/* navy */
+
+/* primary soft */
+
+/* secondary soft */
+
+/* success soft */
+
+/* info soft */
+
+/* warning soft */
+
+/* danger soft */
+
+/* light soft */
+
+/* dark soft */
+
+/* indigo soft */
+
+/* navy soft */
+
+/*------------------------------------
+  Legend Indicator
+------------------------------------*/
+
+/*------------------------------------
+  Media Viewer
+------------------------------------*/
+
+/*------------------------------------
+  Video Player
+------------------------------------*/
+
+/* Positions */
+
+@-webkit-keyframes videoPlayerButton {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1.3);
+            transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+
+@keyframes videoPlayerButton {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1.3);
+            transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+
+/*------------------------------------
+  Device Mockups
+------------------------------------*/
+.device {
+  position: relative;
+}
+
+/*------------------------------------
+  Modal
+------------------------------------*/
+
+/* Cover */
+
+/* Close */
+
+/*------------------------------------
+  Page Preloader
+------------------------------------*/
+
+/*------------------------------------
+  Pagination
+------------------------------------*/
+
+/* Sizes */
+
+/*------------------------------------
+  Navbar
+------------------------------------*/
+
+/*------------------------------------
+  Navbar Vertical
+------------------------------------*/
+
+/*------------------------------------
+  Navs
+------------------------------------*/
+
+/* Small Size */
+
+/* No Gutters */
+
+/* Icon */
+
+/* Shadow */
+
+/* Classic */
+
+/* Rounded */
+
+/* White Color */
+
+/* White Border Color */
+
+/* Box */
+
+/* Segment */
+
+/* Tabs */
+
+/*------------------------------------
+  Nav List
+------------------------------------*/
+
+/*------------------------------------
+  Vertical Progress Bar
+------------------------------------*/
+
+/*------------------------------------
+  Popover
+------------------------------------*/
+
+/*------------------------------------
+  Scrollbar
+------------------------------------*/
+
+/*------------------------------------
+  Search Form - Push Top
+------------------------------------*/
+
+/* Banner */
+
+/*------------------------------------
+  Search Form - Slide Down
+------------------------------------*/
+
+/*------------------------------------
+  Slick
+------------------------------------*/
+.slick {
+  position: relative;
+}
+
+/*------------------------------------
+  Slick Equal Height
+------------------------------------*/
+
+/*------------------------------------
+  Slick Gutters
+------------------------------------*/
+/* Gutters X */
+
+/*------------------------------------
+  Slick Arrows
+------------------------------------*/
+.slick-arrow {
+  z-index: 1;
+  line-height: 0;
+  display: inline-block;
+  color: #1e2022;
+  background-color: #fff;
+  width: 2.6875rem;
+  height: 2.6875rem;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slick-arrow:hover {
+  color: #fff;
+  background-color: #377dff;
+}
+
+.slick-arrow::before {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slick-arrow-left {
+  left: 0;
+}
+
+.slick-arrow-right {
+  right: 0;
+}
+
+/* Primary */
+
+/* Soft White */
+.slick-arrow-soft-white {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.slick-arrow-soft-white:hover {
+  color: #fff;
+  background-color: #377dff;
+}
+
+/* Offset */
+
+/* Vertical Center Alignment */
+.slick-arrow-centered-y {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+/*------------------------------------
+  Slick Counter
+------------------------------------*/
+.slick-counter {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.slick-counter-current {
+  color: #fff;
+  font-size: 3.875rem;
+  line-height: 1;
+}
+
+.slick-counter-divider {
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.slick-counter-total {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*------------------------------------
+  Slick Dot Lined
+------------------------------------*/
+
+/*------------------------------------
+  Slick Pagination
+------------------------------------*/
+.slick-pagination {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.slick-pagination:not(.slick-pagination-vertical) {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  pointer-events: none;
+}
+
+/* White Version */
+
+/*------------------------------------
+  Slick Pagination Interactive
+------------------------------------*/
+
+/*------------------------------------
+  Slick Pagination Modern
+------------------------------------*/
+
+/*------------------------------------
+  Slick Pagination Line
+------------------------------------*/
+
+/*------------------------------------
+  Spinner
+------------------------------------*/
+
+/*------------------------------------
+  Stats Progress
+-------------------------------------*/
+
+/*------------------------------------
+  Step
+------------------------------------*/
+
+/*------------------------------------
+  Step Avatar
+------------------------------------*/
+
+/*------------------------------------
+  Step Avatar
+------------------------------------*/
+
+/*------------------------------------
+  Step Icon
+------------------------------------*/
+
+/*------------------------------------
+  Step Icon Sizes
+------------------------------------*/
+
+/*------------------------------------
+  Step Breakpoints
+------------------------------------*/
+
+/*------------------------------------
+  Step Centered
+------------------------------------*/
+
+/*------------------------------------
+  Step States
+------------------------------------*/
+
+/*------------------------------------
+  Step Colors
+------------------------------------*/
+/* primary */
+
+/* secondary */
+
+/* success */
+
+/* info */
+
+/* warning */
+
+/* danger */
+
+/* light */
+
+/* dark */
+
+/* indigo */
+
+/* navy */
+
+/* primary soft */
+
+/* secondary soft */
+
+/* success soft */
+
+/* info soft */
+
+/* warning soft */
+
+/* danger soft */
+
+/* light soft */
+
+/* dark soft */
+
+/* indigo soft */
+
+/* navy soft */
+
+/*------------------------------------
+  Step Inline
+------------------------------------*/
+
+/*------------------------------------
+  Step Dots
+------------------------------------*/
+
+/*------------------------------------
+  Step Flow
+------------------------------------*/
+
+/*------------------------------------
+  Step Timeline
+------------------------------------*/
+
+/*------------------------------------
+  Tables
+------------------------------------*/
+
+/*------------------------------------
+  Text Highlight
+------------------------------------*/
+
+/* primary text highlight */
+
+/* secondary text highlight */
+
+/* success text highlight */
+
+/* info text highlight */
+
+/* warning text highlight */
+
+/* danger text highlight */
+
+/* light text highlight */
+
+/* dark text highlight */
+
+/* indigo text highlight */
+
+/* navy text highlight */
+
+/*------------------------------------
+  Sticky Blocks
+------------------------------------*/
+
+/*------------------------------------
+  SVG IE10+ specific styles go here
+------------------------------------*/
+
+/*------------------------------------
+  Background Gradients
+------------------------------------*/
+
+/*------------------------------------
+  Background Overlay Gradients
+------------------------------------*/
+
+[class*="gradient-y-overlay-"] {
+  position: relative;
+  z-index: 1;
+}
+
+
+[class*="gradient-y-overlay-"]::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.gradient-y-overlay-sm-dark::before {
+  background-image: linear-gradient(to bottom, rgba(30, 32, 34, 0.3) 0%, rgba(33, 50, 91, 0.2) 100%);
+  background-repeat: repeat-x;
+}
+
+/*------------------------------------
+  Background Image Style
+------------------------------------*/
+.bg-img-hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/*------------------------------------
+  Background Soft Colors
+------------------------------------*/
+
+/*------------------------------------
+  Borders-radius
+------------------------------------*/
+
+/*------------------------------------
+  Borders
+------------------------------------*/
+
+/*------------------------------------
+  Position Spaces
+------------------------------------*/
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+/*------------------------------------
+  Content Centered
+------------------------------------*/
+.content-centered-y {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+/*------------------------------------
+  Opacity
+------------------------------------*/
+
+/*------------------------------------
+  Box Shadow
+------------------------------------*/
+
+/*------------------------------------
+  Width
+------------------------------------*/
+
+/*------------------------------------
+  Height
+------------------------------------*/
+
+@media (min-width: 768px) {
+  .vh-md-30 {
+    height: 30vh;
+  }
+  .vh-md-70 {
+    height: 70vh;
+  }
+}
+
+/*------------------------------------
+  Typography
+------------------------------------*/
+
+/*------------------------------------
+  Text Colors
+------------------------------------*/
+
+.text-muted[href]:hover {
+  color: #0052ea !important;
+}
+
+.text-white-70 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-white-70[href]:hover {
+  color: #fff;
+}
+
+/*------------------------------------
+  Transform Rotate
+------------------------------------*/
+
+/*------------------------------------
+  Transitions
+------------------------------------*/
+/* 3D Hover */
+
+/*------------------------------------
+  Z-Index
+------------------------------------*/
+
+/*------------------------------------
+  Unfold
+------------------------------------*/
+.hs-unfold {
+  position: relative;
+  display: inline-block;
+}
+
+/*------------------------------------
+  Video Background
+------------------------------------*/
+/*------------------------------------
+  Video Background
+------------------------------------*/
+
+/*------------------------------------
+  Chartjs
+------------------------------------*/
+
+/*------------------------------------
+  Cubeportfolio
+------------------------------------*/
+
+/*------------------------------------
+  Dropzone
+------------------------------------*/
+
+/*------------------------------------
+  Dzsparallaxer
+------------------------------------*/
+
+/*--------------------------------------------------
+  Fancybox
+----------------------------------------------------*/
+
+/*------------------------------------
+  Leaflet
+------------------------------------*/
+
+/*------------------------------------
+  Summernote Editor
+------------------------------------*/
+
+/*------------------------------------
+  Select2
+------------------------------------*/
+
+/*------------------------------------
+  Range Slider
+------------------------------------*/
+
+/* Indicator */
+
+/* Grid */
+
+/*------------------------------------
+  Slick
+------------------------------------*/
+.slick {
+  position: relative;
+}
+
+.slick-vertical .slick-slide {
+  border-width: 0;
+}
+
+.slick-transform-off.slick-transform-off .slick-track {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.slick-thumb-progress {
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.slick-center-mode-right {
+  margin-right: calc(-1px - ((100vw - 100%) / 2) + 16px) !important;
+}
+
+.slick-center-mode-right-offset .draggable {
+  padding-right: 5rem;
+}
+
+/*------------------------------------
+  Slick Equal Height
+------------------------------------*/
+.slick-equal-height .slick-list {
+  height: 100%;
+}
+
+.slick-equal-height .slick-track {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.slick-equal-height .slick-track .slick-slide {
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+
+/*------------------------------------
+  Slick Gutters
+------------------------------------*/
+/* Gutters X */
+.slick-gutters-1 {
+  margin-left: -.25rem;
+  margin-right: -.25rem;
+}
+
+.slick-gutters-1 .slick-slide {
+  margin-left: .25rem;
+  margin-right: .25rem;
+}
+
+.slick-gutters-2 {
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+}
+
+.slick-gutters-2 .slick-slide {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.slick-gutters-3 {
+  margin-left: -.9375rem;
+  margin-right: -.9375rem;
+}
+
+.slick-gutters-3 .slick-slide {
+  margin-left: .9375rem;
+  margin-right: .9375rem;
+}
+
+/*------------------------------------
+  Slick Arrows
+------------------------------------*/
+.slick-arrow {
+  z-index: 1;
+  line-height: 0;
+  display: inline-block;
+  color: #1e2022;
+  background-color: #fff;
+  width: 2.6875rem;
+  height: 2.6875rem;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slick-arrow:hover {
+  color: #fff;
+  background-color: #377dff;
+}
+
+.slick-arrow::before {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slick-arrow-left {
+  left: 0;
+}
+
+.slick-arrow-right {
+  right: 0;
+}
+
+/* Primary */
+.slick-arrow-primary {
+  color: #fff;
+  background-color: rgba(55, 125, 255, 0.8);
+}
+
+/* Soft White */
+.slick-arrow-soft-white {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.slick-arrow-soft-white:hover {
+  color: #fff;
+  background-color: #377dff;
+}
+
+/* Offset */
+@media (min-width: 992px) {
+  .slick-arrow-offset.slick-arrow-left {
+    left: -2.6875rem;
+  }
+  .slick-arrow-offset.slick-arrow-right {
+    right: -2.6875rem;
+  }
+}
+
+/* Vertical Center Alignment */
+.slick-arrow-centered-y {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+/*------------------------------------
+  Slick Counter
+------------------------------------*/
+.slick-counter {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.slick-counter-current {
+  color: #fff;
+  font-size: 3.875rem;
+  line-height: 1;
+}
+
+.slick-counter-divider {
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.slick-counter-total {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*------------------------------------
+  Slick Dot Lined
+------------------------------------*/
+.slick-dots {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.slick-dots li {
+  cursor: pointer;
+  margin: 0 .3125rem;
+}
+
+.slick-dots .dot-line {
+  position: relative;
+  display: block;
+  width: 2.75rem;
+  height: 0.1875rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slick-dots .dot-line-helper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #377dff;
+  transition: none;
+}
+
+.slick-line-dots-ready .slick-dots li.slick-active .dot-line-helper {
+  transition-property: width;
+  transition-timing-function: linear;
+  width: 100%;
+}
+
+/*------------------------------------
+  Slick Pagination
+------------------------------------*/
+.slick-pagination {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.slick-pagination:not(.slick-pagination-vertical) {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  pointer-events: none;
+}
+
+.slick-pagination li {
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: all;
+  margin: 0 .25rem;
+  cursor: pointer;
+}
+
+.slick-pagination li span {
+  display: inline-block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  box-sizing: border-box;
+  background-color: #377dff;
+  border: 0.1875rem solid transparent;
+  border-radius: 50%;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  transition: 0.3s;
+}
+
+.slick-pagination li.slick-active span {
+  background-color: transparent;
+  border-color: #377dff;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+/* White Version */
+.slick-pagination-white li span {
+  background-color: #fff;
+}
+
+.slick-pagination-white li.slick-active span {
+  border-color: #fff;
+}
+
+.slick-pagination-vertical li {
+  display: block;
+}
+
+/*------------------------------------
+  Slick Pagination Interactive
+------------------------------------*/
+.slick-pagination-interactive-title {
+  color: #fff;
+}
+
+.slick-pagination-interactive-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.slick-pagination-interactive .slick-slide {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.slick-pagination-interactive .slick-slide:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slick-pagination-interactive .slick-slide:hover.slick-center {
+  background-color: #fff;
+}
+
+.slick-pagination-interactive .slick-center {
+  background-color: #fff;
+}
+
+.slick-pagination-interactive .slick-center .slick-pagination-interactive-title {
+  color: #377dff;
+}
+
+.slick-pagination-interactive .slick-center .slick-pagination-interactive-text {
+  color: #677788;
+}
+
+/*------------------------------------
+  Slick Pagination Modern
+------------------------------------*/
+.slick-pagination-modern {
+  width: 100%;
+  max-width: 12.5rem;
+}
+
+.slick-pagination-modern .slick-slide {
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: 0.3s;
+}
+
+.slick-pagination-modern .slick-current {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/*------------------------------------
+  Slick Pagination Line
+------------------------------------*/
+.slick-pagination-line .slick-slide {
+  opacity: .5;
+  cursor: pointer;
+  font-weight: 400;
+  padding-bottom: 0.25rem;
+}
+
+.slick-pagination-line .slick-slide.slick-current {
+  opacity: 1;
+}
+
+.slick-pagination-line-progress {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0.1875rem;
+  background-color: #fff;
+  margin-top: 0.5rem;
+}
+
+.slick-pagination-line-progress-helper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 100%;
+  transition: none;
+}
+
+.slick-pagination-line.slick-dots-ready .slick-current .slick-pagination-line-progress-helper {
+  width: 100%;
+  background-color: #377dff;
+  transition-property: width;
+  transition-timing-function: linear;
+}
+
+@media (max-width: 991.98px) {
+  .slick-pagination-line-wrapper {
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+}
+/*------------------------------------
+  Slick
+------------------------------------*/
+.slick-cloned [data-hs-slick-carousel-slide-animated-element-animation] {
+  opacity: 0;
+}
+
+.slick {
+  background: url(../svg/components/circle-preloader.svg) no-repeat 50% 50%;
+}
+
+.slick .js-next,
+.slick .js-prev {
+  opacity: 0;
+}
+
+.slick.slick-initialized {
+  background: none;
+}
+
+.slick.slick-initialized .js-slide,
+.slick.slick-initialized .js-thumb {
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+}
+
+.slick.slick-initialized .js-next,
+.slick.slick-initialized .js-prev {
+  opacity: 1;
+}
+
+.slick .js-slide,
+.slick .js-thumb {
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.slick .js-slide:first-child,
+.slick .js-thumb:first-child {
+  height: auto;
+}
+
+/*------------------------------------
+  Tagify
+------------------------------------*/
+
+/*------------------------------------
+  Typed.js
+------------------------------------*/
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*------------------------------------
+  File for your custom SCSS style
+------------------------------------*/
