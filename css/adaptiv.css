@@ -214,17 +214,12 @@ max-height: 800px;
 }
 @media(max-width: 506px)
 {
-	.video-container{
-	width: 300px;
-}
+	
 .right__section {
     padding: 35px 40px;
     /* margin-left: 40px; */
 }
-	.video{
-	width: 300px;
-	padding-top: 50px;
-}
+
 .text {
     position: absolute;
     top: 12%;
@@ -238,7 +233,7 @@ max-height: 800px;
     max-width: 100%;
 }
 .right__section {
-	padding: 60px 20px;
+	
   
 }
 .project__items {

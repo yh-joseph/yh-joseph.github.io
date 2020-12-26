@@ -3,7 +3,7 @@
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
 	box-sizing: border-box;
-	transition: .2s ease;
+	
 
 letter-spacing: 0.0125em;
 }
@@ -547,13 +547,9 @@ margin-right: 20px;
 
 }
 
-.video-container{
-	width: 500px;
-    height: 300px;
-    margin: 20px 20px;
-}
+
 .prefuter{
-	margin-top: 120px;
+	
 	background-color:  rgb(244, 244, 244);
 }
 .footer__inner{
@@ -615,17 +611,16 @@ footer{
     opacity: 0.5;
     z-index: -1111;
 }
-.video{
-	width: 500px;
-	height: 300px;
-}
+
+
 .project{
-	margin-top: 52px;
-	margin-bottom: 100px;
+	margin-top: 50px;
+	
 	text-align: center;
 	min-height: 650px;
 	background-image: url('../img/africawork.jpg');
 }
+
 .project-h2 {font-weight: 600;
     color: #4e8915;
     margin-bottom: 5px;
@@ -924,4 +919,44 @@ align-self: flex-start;
 	background: #fce01b;
 }
 
+.read_more{
+	
+	color: #00217a;
+}
+.read_more:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.read_more_slider{
+	color: #fce01b;
+	font-size: 18px;
+}
+.text_sliders:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-color: #fff;
+}
 
+.video-container{
+	width: 500px;
+    height: 300px;
+    margin: 20px 20px;
+}
+.video{
+	width: 500px;
+	height: 300px;
+}
+.current_p{
+	color:  #F3F3F3;
+	font-size: 14px;
+	background-color:  #4E8915;
+}
+
+.mb-0{
+	font-size: 18px;
+}
+
+.past_p{
+	
+	background-color: #F3F3F3;
+}
