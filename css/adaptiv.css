@@ -208,7 +208,7 @@ max-height: 800px;
 }
 
 }
-@media(max-width: 506px)
+@media(max-width: 570px)
 {
 	.video-container{
 		width: 300px;
@@ -254,14 +254,11 @@ max-height: 800px;
 		margin: 0, 0.8em, 0, 0.8em;
 	}
 }
-@media(max-width: 560px)
+@media(max-width: 507px)
 {
-
-
-.header__logo{
-	
-	/*display: none;*/
-}
+	.maintext_slides2{
+		font-size: 1.3rem;
+	}
 }
 @media(max-width: 547px)
 {

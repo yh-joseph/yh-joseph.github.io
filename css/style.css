@@ -694,6 +694,7 @@ position:relative;
 
 
 .footer__link{
+	padding-left: 10px;
 	color: white;
 }
 .page-title  { color: #ffffff;
