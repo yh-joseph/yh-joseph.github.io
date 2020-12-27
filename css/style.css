@@ -225,10 +225,10 @@ img{
 .header__inner{
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items:center;
 	max-width: 1140px;
 	margin: 0 auto;
-	min-height: 150px !important;
+	min-height: 150px ;
 	
 }
 .header__top-link{
@@ -831,20 +831,22 @@ padding: 10px 10px;
 .menu__hidden-2{
 	display: none;
 	position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 129px;
-    margin-left: 40px;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 150px;
+	margin-left: 40px;
+	
 }
 .logofix{
 align-self: flex-start;
 }
 .header__innerfix{
-	min-height: 700px !important;
+	min-height: 665px !important;
 
 }
 .twoitemsfix{
-	     display: flex;
+	display: flex;
+	flex-wrap:wrap;
  
 }
 .icons_purpose{
@@ -959,4 +961,7 @@ align-self: flex-start;
 .past_p{
 	
 	background-color: #F3F3F3;
+}
+.footer__link:hover {
+	color: #fce01b !important;
 }
